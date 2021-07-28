@@ -374,7 +374,7 @@ else:
 			print()
 		else:
 			print("No more arguments")
-	else:
+	elif not method is None:
 		args = eval_list(args)
 		ret = obj.object.get_dbus_method(method.name, iface.name)(*args)
 		outargs = method.args_out
